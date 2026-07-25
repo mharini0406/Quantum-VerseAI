@@ -1,0 +1,398 @@
+{% extends "base.html" %}
+
+{% block title %}QuantumVerse AI | Home{% endblock %}
+
+{% block content %}
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <span class="hero-tag">
+             Quantum  Platform
+        </span>
+
+        <h1>
+
+            Learn Quantum
+            <br>
+
+            Computing
+            <br>
+
+            Interactively
+
+        </h1>
+
+        <p>
+
+            QuantumVerse AI is an interactive learning platform designed for
+            students, educators, and researchers. Explore quantum computing
+            through engaging lessons, simulations, AI tutoring, quizzes,
+            and practical coding exercises.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('learn') }}" class="btn-primary">
+
+                Start Learning
+
+            </a>
+
+            <a href="{{ url_for('lab') }}" class="btn-secondary">
+
+                Explore Lab
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-right">
+
+        <img
+        src="{{ url_for('static', filename='images/logo.jpg') }}"
+        alt="Quantum Illustration">
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <h2>
+
+        Why QuantumVerse AI?
+
+    </h2>
+
+    <p>
+
+        Everything required to learn Quantum Computing in one place.
+
+    </p>
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-book-open"></i>
+
+            <h3>
+
+                Interactive Lessons
+
+            </h3>
+
+            <p>
+
+                Beginner-friendly explanations with diagrams,
+                animations and examples.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-microchip"></i>
+
+            <h3>
+
+                Quantum Simulator
+
+            </h3>
+
+            <p>
+
+                Build and visualize quantum circuits directly
+                inside your browser.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-robot"></i>
+
+            <h3>
+
+                AI Tutor
+
+            </h3>
+
+            <p>
+
+                Ask questions and receive instant explanations
+                for difficult concepts.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-pen-ruler"></i>
+
+            <h3>
+
+                Hands-on Practice
+
+            </h3>
+
+            <p>
+
+                Reinforce every lesson using quizzes,
+                coding tasks and exercises.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            <h3>
+
+                Progress Dashboard
+
+            </h3>
+
+            <p>
+
+                Track your learning journey and monitor
+                completed lessons.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="feature-card">
+
+            <i class="fa-solid fa-flask"></i>
+
+            <h3>
+
+                Virtual Quantum Lab
+
+            </h3>
+
+            <p>
+
+                Experiment with gates,
+                measurements,
+                Bloch Sphere
+                and algorithms.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ================= ROADMAP ================= -->
+
+<section class="roadmap">
+
+    <h2>
+
+        Learning Roadmap
+
+    </h2>
+
+    <p>
+
+        Follow a structured learning journey from fundamentals
+        to advanced quantum computing.
+
+    </p>
+
+    <div class="roadmap-grid">
+
+        <div class="roadmap-box">
+
+            Introduction
+
+        </div>
+
+        <div class="roadmap-box">
+
+            Qubits
+
+        </div>
+
+        <div class="roadmap-box">
+
+            Superposition
+
+        </div>
+
+        <div class="roadmap-box">
+
+            Entanglement
+
+        </div>
+
+        <div class="roadmap-box">
+
+            Quantum Gates
+
+        </div>
+
+        <div class="roadmap-box">
+
+            Circuits
+
+        </div>
+
+        <div class="roadmap-box">
+
+            Algorithms
+
+        </div>
+
+        <div class="roadmap-box">
+
+            QML
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ================= STATS ================= -->
+
+<section class="stats">
+
+    <div class="stat">
+
+        <h2>
+
+            50+
+
+        </h2>
+
+        <p>
+
+            Lessons
+
+        </p>
+
+    </div>
+
+    <div class="stat">
+
+        <h2>
+
+            100+
+
+        </h2>
+
+        <p>
+
+            Quiz Questions
+
+        </p>
+
+    </div>
+
+    <div class="stat">
+
+        <h2>
+
+            20+
+
+        </h2>
+
+        <p>
+
+            Simulations
+
+        </p>
+
+    </div>
+
+    <div class="stat">
+
+        <h2>
+
+            10+
+
+        </h2>
+
+        <p>
+
+            Practical Labs
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ================= CALL TO ACTION ================= -->
+
+<section class="cta">
+
+    <h2>
+
+        Ready to Start Your Quantum Journey?
+
+    </h2>
+
+    <p>
+
+        Learn modern quantum computing through interactive education,
+        AI assistance, simulations, coding tutorials and visual learning.
+
+    </p>
+
+    <a href="{{ url_for('learn') }}" class="btn-primary">
+
+        Begin Learning
+
+    </a>
+
+</section>
+
+{% endblock %}

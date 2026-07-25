@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard | QuantumVerse AI
+{% endblock %}
+
+{% block content %}
+
+<section class="page-header">
+    <h1>📊 Student Dashboard</h1>
+    <p>Track your learning journey and achievements.</p>
+</section>
+
+<section class="dashboard-container">
+
+    <div class="dashboard-card">
+        <h2>📘 Lessons Completed</h2>
+        <h3>4 / 10</h3>
+
+        <div class="progress">
+            <div class="progress-fill" style="width:40%;"></div>
+        </div>
+    </div>
+
+    <div class="dashboard-card">
+        <h2>📝 Quiz Score</h2>
+        <h3>80%</h3>
+
+        <div class="progress">
+            <div class="progress-fill" style="width:80%;"></div>
+        </div>
+    </div>
+
+    <div class="dashboard-card">
+        <h2>⏱ Learning Time</h2>
+        <h3>5 Hours</h3>
+    </div>
+
+    <div class="dashboard-card">
+        <h2>🏆 Achievements</h2>
+
+        <ul>
+            <li>✅ Completed Introduction</li>
+            <li>✅ Finished Quantum Basics</li>
+            <li>⭐ Passed First Quiz</li>
+        </ul>
+    </div>
+
+    <div class="dashboard-card">
+        <h2>📜 Certificate</h2>
+
+        <p>
+            Complete all lessons and score at least 80%
+            to unlock your certificate.
+        </p>
+
+        <button class="primary-btn">
+            View Certificate
+        </button>
+    </div>
+
+    <div class="dashboard-card">
+        <h2>🎯 Next Goal</h2>
+
+        <p>
+            Complete the Quantum Lab and Simulator
+            to reach 60% course completion.
+        </p>
+    </div>
+
+</section>
+
+{% endblock %}

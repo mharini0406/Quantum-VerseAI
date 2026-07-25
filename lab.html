@@ -1,0 +1,644 @@
+{% extends "base.html" %}
+
+{% block title %}QuantumVerse AI | Quantum Lab{% endblock %}
+
+{% block content %}
+
+<!-- ================= LAB HERO ================= -->
+
+<section class="lab-hero">
+
+    <div class="lab-left">
+
+        <span class="hero-tag">
+            Interactive Quantum Laboratory
+        </span>
+
+        <h1>
+            Build, Test &
+            <br>
+            Explore Quantum Circuits
+        </h1>
+
+        <p>
+
+            The Quantum Lab provides a hands-on environment where learners can
+            experiment with quantum gates, visualize quantum states, and better
+            understand the behavior of quantum circuits through interactive
+            exploration.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="{{ url_for('simulator') }}" class="btn-primary">
+                Open Simulator
+            </a>
+
+            <a href="{{ url_for('learn') }}" class="btn-secondary">
+                Read Theory
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="lab-right">
+
+        <img src="{{ url_for('static', filename='images/lab.png') }}"
+             alt="Quantum Lab">
+
+    </div>
+
+</section>
+
+<!-- ================= TOOLBOX ================= -->
+
+<section class="toolbox-section">
+
+    <h2>Quantum Gate Toolbox</h2>
+
+    <p>
+
+        Click a gate to learn its function before adding it to a quantum
+        circuit.
+
+    </p>
+
+    <div class="toolbox-grid">
+
+        <div class="gate-card">
+
+            <div class="gate-icon">
+                H
+            </div>
+
+            <h3>Hadamard Gate</h3>
+
+            <p>
+
+                Places a qubit into superposition.
+
+            </p>
+
+        </div>
+
+        <div class="gate-card">
+
+            <div class="gate-icon">
+                X
+            </div>
+
+            <h3>Pauli-X</h3>
+
+            <p>
+
+                Flips |0⟩ into |1⟩ and vice versa.
+
+            </p>
+
+        </div>
+
+        <div class="gate-card">
+
+            <div class="gate-icon">
+                Y
+            </div>
+
+            <h3>Pauli-Y</h3>
+
+            <p>
+
+                Rotates the qubit around the Y-axis.
+
+            </p>
+
+        </div>
+
+        <div class="gate-card">
+
+            <div class="gate-icon">
+                Z
+            </div>
+
+            <h3>Pauli-Z</h3>
+
+            <p>
+
+                Changes the phase of the quantum state.
+
+            </p>
+
+        </div>
+
+        <div class="gate-card">
+
+            <div class="gate-icon">
+                S
+            </div>
+
+            <h3>S Gate</h3>
+
+            <p>
+
+                Applies a phase shift of π/2.
+
+            </p>
+
+        </div>
+
+        <div class="gate-card">
+
+            <div class="gate-icon">
+                T
+            </div>
+
+            <h3>T Gate</h3>
+
+            <p>
+
+                Applies a phase shift of π/4.
+
+            </p>
+
+        </div>
+
+        <div class="gate-card">
+
+            <div class="gate-icon">
+                CNOT
+            </div>
+
+            <h3>Controlled NOT</h3>
+
+            <p>
+
+                Creates entanglement between qubits.
+
+            </p>
+
+        </div>
+
+        <div class="gate-card">
+
+            <div class="gate-icon">
+                M
+            </div>
+
+            <h3>Measurement</h3>
+
+            <p>
+
+                Measures the final quantum state.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CIRCUIT PREVIEW ================= -->
+
+<section class="circuit-preview">
+
+    <h2>Example Quantum Circuit</h2>
+
+    <p>
+
+        Observe how a simple Bell State circuit is constructed.
+
+    </p>
+
+    <div class="circuit-board">
+
+        <div class="wire">
+
+            <span>q0</span>
+
+            <div class="gate">H</div>
+
+            <div class="line"></div>
+
+            <div class="gate">●</div>
+
+            <div class="line"></div>
+
+            <div class="gate">M</div>
+
+        </div>
+
+        <div class="wire">
+
+            <span>q1</span>
+
+            <div class="empty"></div>
+
+            <div class="line"></div>
+
+            <div class="gate">⊕</div>
+
+            <div class="line"></div>
+
+            <div class="gate">M</div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= INTERACTIVE EXPERIMENTS ================= -->
+
+<section class="lab-experiments">
+
+    <h2>Interactive Quantum Experiments</h2>
+
+    <p>
+        Explore real quantum concepts through guided experiments.
+        Each activity builds your understanding step by step.
+    </p>
+
+    <div class="experiment-grid">
+
+        <div class="experiment-card">
+
+            <i class="fa-solid fa-atom"></i>
+
+            <h3>Superposition</h3>
+
+            <p>
+                Apply a Hadamard gate and observe how a qubit enters
+                a superposition state.
+            </p>
+
+            <a href="{{ url_for('simulator') }}" class="btn-primary">
+                Launch
+            </a>
+
+        </div>
+
+        <div class="experiment-card">
+
+            <i class="fa-solid fa-link"></i>
+
+            <h3>Entanglement</h3>
+
+            <p>
+                Build a Bell State using Hadamard and CNOT gates
+                and visualize correlated measurements.
+            </p>
+
+            <a href="{{ url_for('simulator') }}" class="btn-primary">
+                Launch
+            </a>
+
+        </div>
+
+        <div class="experiment-card">
+
+            <i class="fa-solid fa-wave-square"></i>
+
+            <h3>Quantum Gates</h3>
+
+            <p>
+                Experiment with X, Y, Z, S and T gates and observe
+                their influence on qubit states.
+            </p>
+
+            <a href="{{ url_for('simulator') }}" class="btn-primary">
+                Launch
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= LEARNING OBJECTIVES ================= -->
+
+<section class="lab-objectives">
+
+    <div class="objective-text">
+
+        <h2>Learning Objectives</h2>
+
+        <p>
+            Complete the Quantum Lab activities to strengthen your
+            understanding of the core principles behind quantum
+            computation.
+        </p>
+
+        <ul>
+
+            <li><i class="fa-solid fa-circle-check"></i> Understand qubits and quantum states</li>
+
+            <li><i class="fa-solid fa-circle-check"></i> Apply quantum gates correctly</li>
+
+            <li><i class="fa-solid fa-circle-check"></i> Build simple quantum circuits</li>
+
+            <li><i class="fa-solid fa-circle-check"></i> Explore measurement outcomes</li>
+
+            <li><i class="fa-solid fa-circle-check"></i> Visualize Bell States</li>
+
+            <li><i class="fa-solid fa-circle-check"></i> Prepare for Grover and QFT</li>
+
+        </ul>
+
+    </div>
+
+    <div class="objective-image">
+
+        <img src="{{ url_for('static', filename='images/objective.png') }}"
+             alt="Learning Objectives">
+
+    </div>
+
+</section>
+
+<!-- ================= PROGRESS ================= -->
+
+<section class="lab-progress">
+
+    <h2>Your Lab Progress</h2>
+
+    <p>Complete activities to unlock advanced experiments.</p>
+
+    <div class="progress-wrapper">
+
+        <div class="progress-card">
+
+            <h3>Completed Experiments</h3>
+
+            <h1>05</h1>
+
+        </div>
+
+        <div class="progress-card">
+
+            <h3>Remaining</h3>
+
+            <h1>15</h1>
+
+        </div>
+
+        <div class="progress-card">
+
+            <h3>Completion</h3>
+
+            <h1>25%</h1>
+
+        </div>
+
+        <div class="progress-card">
+
+            <h3>Certificates</h3>
+
+            <h1>01</h1>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= FEATURED LABS ================= -->
+
+<section class="featured-labs">
+
+    <h2>Featured Virtual Labs</h2>
+
+    <div class="featured-grid">
+
+        <div class="featured-card">
+
+            <img src="{{ url_for('static', filename='images/lab1.jpg') }}" alt="">
+
+            <h3>Bloch Sphere Explorer</h3>
+
+            <p>
+                Visualize rotations of a qubit in three-dimensional space.
+            </p>
+
+        </div>
+
+        <div class="featured-card">
+
+            <img src="{{ url_for('static', filename='images/lab2.jpg') }}" alt="">
+
+            <h3>Quantum Teleportation</h3>
+
+            <p>
+                Understand quantum communication using entangled qubits.
+            </p>
+
+        </div>
+
+        <div class="featured-card">
+
+            <img src="{{ url_for('static', filename='images/lab3.jpg') }}" alt="">
+
+            <h3>Deutsch Algorithm</h3>
+
+            <p>
+                Discover one of the earliest demonstrations of quantum advantage.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= QUANTUM CHALLENGES ================= -->
+
+<section class="quantum-challenges">
+
+    <h2>Quantum Challenges</h2>
+
+    <p>
+        Test your understanding by completing guided laboratory
+        challenges designed for beginners and advanced learners.
+    </p>
+
+    <div class="challenge-grid">
+
+        <div class="challenge-card">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h3>Beginner</h3>
+
+            <p>Create your first quantum circuit using one qubit.</p>
+
+            <span class="difficulty easy">Easy</span>
+
+        </div>
+
+        <div class="challenge-card">
+
+            <i class="fa-solid fa-bolt"></i>
+
+            <h3>Intermediate</h3>
+
+            <p>Generate a Bell State using Hadamard and CNOT gates.</p>
+
+            <span class="difficulty medium">Medium</span>
+
+        </div>
+
+        <div class="challenge-card">
+
+            <i class="fa-solid fa-trophy"></i>
+
+            <h3>Advanced</h3>
+
+            <p>Implement Grover's Search Algorithm and analyze results.</p>
+
+            <span class="difficulty hard">Hard</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LAB TIPS ================= -->
+
+<section class="lab-tips">
+
+    <h2>Lab Tips</h2>
+
+    <div class="tips-grid">
+
+        <div class="tip-card">
+
+            <i class="fa-solid fa-lightbulb"></i>
+
+            <h3>Start Small</h3>
+
+            <p>
+                Build one-qubit circuits before moving to multiple qubits.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <i class="fa-solid fa-eye"></i>
+
+            <h3>Visualize</h3>
+
+            <p>
+                Observe probability changes after every quantum gate.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <i class="fa-solid fa-repeat"></i>
+
+            <h3>Experiment</h3>
+
+            <p>
+                Repeat experiments with different gate sequences.
+            </p>
+
+        </div>
+
+        <div class="tip-card">
+
+            <i class="fa-solid fa-brain"></i>
+
+            <h3>Understand</h3>
+
+            <p>
+                Focus on why the circuit behaves the way it does.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section class="lab-faq">
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+
+        <h3>Do I need programming knowledge?</h3>
+
+        <p>
+            No. The laboratory is designed for beginners and gradually
+            introduces programming concepts.
+        </p>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>Can I experiment without real quantum hardware?</h3>
+
+        <p>
+            Yes. The simulator allows you to explore quantum circuits
+            directly in your browser.
+        </p>
+
+    </div>
+
+    <div class="faq-item">
+
+        <h3>Will these labs help with WISER projects?</h3>
+
+        <p>
+            Absolutely. They are designed to strengthen conceptual
+            understanding and practical implementation skills.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CALL TO ACTION ================= -->
+
+<section class="lab-cta">
+
+    <h2>Ready for the Next Experiment?</h2>
+
+    <p>
+
+        Continue your quantum journey by opening the simulator,
+        building custom circuits, and testing your understanding
+        through interactive challenges.
+
+    </p>
+
+    <div class="hero-buttons">
+
+        <a href="{{ url_for('simulator') }}" class="btn-primary">
+
+            Open Simulator
+
+        </a>
+
+        <a href="{{ url_for('quiz') }}" class="btn-secondary">
+
+            Take Quiz
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

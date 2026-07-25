@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}{{ lesson.topic }}{% endblock %}
+
+{% block content %}
+
+<div class="learn-page">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+
+        <h2>📘 Lessons</h2>
+
+        <ul>
+
+            {% for item in lessons %}
+
+            <li>
+
+                <a href="{{ url_for('lesson', lesson_id=item.id) }}"
+                   {% if item.id == lesson.id %}class="active"{% endif %}>
+                    {{ item.id + 1 }}. {{ item.topic }}
+                </a>
+
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+    </div>
+
+    <!-- Lesson Content -->
+
+    <div class="content">
+
+        <h1>{{ lesson.topic }}</h1>
+
+        <hr>
+
+        <div class="lesson-content">
+
+            <pre>{{ lesson.content }}</pre>
+
+        </div>
+
+        <br><br>
+
+        <div class="navigation-buttons">
+
+            {% if previous is not none %}
+
+            <a class="btn btn-primary"
+               href="{{ url_for('lesson', lesson_id=previous) }}">
+                ← Previous
+            </a>
+
+            {% endif %}
+
+            {% if next is not none %}
+
+            <a class="btn btn-success"
+               style="float:right"
+               href="{{ url_for('lesson', lesson_id=next) }}">
+                Next →
+            </a>
+
+            {% endif %}
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

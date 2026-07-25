@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Hadamard Gate Demo</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+
+.container{
+width:80%;
+margin:auto;
+text-align:center;
+padding:40px;
+}
+
+img{
+width:500px;
+margin-top:30px;
+}
+
+.result{
+margin-top:30px;
+background:#10263d;
+padding:20px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Hadamard Gate Demonstration</h1>
+
+<p>
+
+The Hadamard gate places a qubit into superposition.
+
+</p>
+
+<img
+src="{{ url_for('static', filename='images/hadamard.png') }}">
+
+<div class="result">
+
+<h2>Measurement Results</h2>
+
+<p>{{ counts }}</p>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

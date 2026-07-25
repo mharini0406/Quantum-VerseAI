@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>
+        {% block title %}
+        QuantumVerseAI
+        {% endblock %}
+    </title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        QuantumVerseAI
+    </div>
+
+
+    <nav class="navbar">
+    <div class="nav-container">
+
+        
+
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">HOME</a></li>
+            <li><a href="{{ url_for('learn') }}">LEARN</a></li>
+            <li><a href="{{ url_for('lab') }}">LAB</a></li>
+            <li><a href="{{ url_for('simulator') }}">SIMULATOR</a></li>
+            <li><a href="{{ url_for('quiz') }}">PRACTICE</a></li>
+            <li><a href="{{ url_for('ai_tutor') }}">AI TUTOR</a></li>
+            <li><a href="{{ url_for('about') }}">ABOUT</a></li>
+        </ul>
+
+    </div>
+    </nav>
+
+</header>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+
+<main>
+
+    {% block content %}
+
+    {% endblock %}
+
+</main>
+
+
+
+
+<!-- ================= FOOTER ================= -->
+
+
+<footer class="footer">
+
+    <h3>
+        QuantumVerseAI
+    </h3>
+
+
+    <p>
+        Learn Quantum Computing the Interactive Way
+    </p>
+
+
+    <p>
+        Built for WISER Quantum + AI Challenge 2026
+    </p>
+
+
+    <p>
+        © 2026 QuantumVerseAI | All Rights Reserved
+    </p>
+
+
+</footer>
+
+
+
+<!-- JavaScript -->
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+
+</body>
+
+</html>

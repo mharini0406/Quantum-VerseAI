@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}AI Tutor{% endblock %}
+
+{% block content %}
+
+<div class="container py-5">
+
+    <div class="ai-container">
+
+        <div class="text-center mb-4">
+
+            <h1>🤖 QuantumVerse AI Tutor</h1>
+
+            <p>
+                Ask me any question about Quantum Computing Basics.
+            </p>
+
+        </div>
+
+        <!-- Chat Window -->
+
+        <div id="chatBox">
+
+        </div>        <!-- Input Section -->
+
+        <div class="chat-input mt-4">
+
+            <input
+                type="text"
+                id="userInput"
+                class="form-control"
+                placeholder="Ask a question about Quantum Computing..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                onclick="sendMessage()"
+                class="btn btn-primary">
+                Send
+            </button>
+
+        </div>
+
+        <div class="mt-3 text-center">
+
+            <small class="text-muted">
+                Try asking:
+                <br>
+                • What is a qubit?
+                <br>
+                • Explain superposition.
+                <br>
+                • What is quantum entanglement?
+                <br>
+                • What is Qiskit?
+            </small>
+
+        </div>        <!-- End of AI Tutor -->
+
+    </div>
+
+</div>
+
+<!-- AI Tutor JavaScript -->
+<script src="{{ url_for('static', filename='js/ai_tutor.js') }}"></script>
+
+{% endblock %}

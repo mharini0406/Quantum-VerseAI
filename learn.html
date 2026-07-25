@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% block title %}Learn Quantum Computing{% endblock %}
+
+{% block content %}
+
+<div class="learn-page">
+
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+
+        <h2>📘 Lessons</h2>
+
+        <ul>
+
+            <li><a href="{{ url_for('lesson', lesson_id=0) }}">1. Introduction to Quantum Computing</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=1) }}">2. History of Quantum Computing</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=2) }}">3. Classical vs Quantum Computing</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=3) }}">4. Qubits</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=4) }}">5. Superposition</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=5) }}">6. Quantum Entanglement</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=6) }}">7. Quantum Gates</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=7) }}">8. Quantum Circuits</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=8) }}">9. Quantum Algorithms</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=9) }}">10. Qiskit</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=10) }}">11. Applications of Quantum Computing</a></li>
+
+            <li><a href="{{ url_for('lesson', lesson_id=11) }}">12. Future of Quantum Computing</a></li>
+
+        </ul>
+
+    </div>
+
+    <!-- Right Content -->
+    <div class="content">
+
+        <h1>Quantum Computing Course</h1>
+
+        <p>
+            Welcome to the QuantumVerse AI learning platform.
+            This course covers the fundamentals of quantum computing
+            from basic concepts to real-world applications.
+
+            Select any lesson from the left sidebar to start learning.
+        </p>
+
+        <div class="course-card">
+
+            <h3>📖 Course Contents</h3>
+
+            <p>
+                ✔ Introduction<br>
+                ✔ History<br>
+                ✔ Classical vs Quantum Computing<br>
+                ✔ Qubits<br>
+                ✔ Superposition<br>
+                ✔ Entanglement<br>
+                ✔ Quantum Gates<br>
+                ✔ Quantum Circuits<br>
+                ✔ Quantum Algorithms<br>
+                ✔ Qiskit<br>
+                ✔ Applications<br>
+                ✔ Future Scope
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Quantum State Visualizer</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+
+.container{
+width:80%;
+margin:auto;
+padding:40px;
+text-align:center;
+}
+
+.state{
+font-size:40px;
+margin:30px;
+color:#4FD1C5;
+}
+
+select{
+padding:12px;
+font-size:18px;
+}
+
+.result{
+margin-top:30px;
+background:#10263d;
+padding:20px;
+border-radius:12px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Quantum State Visualizer</h1>
+
+<p>Initial State</p>
+
+<div class="state">
+
+|0⟩
+
+</div>
+
+<select id="gate">
+
+<option>Hadamard</option>
+<option>Pauli-X</option>
+<option>Pauli-Z</option>
+
+</select>
+
+<br><br>
+
+<button onclick="applyGate()">
+
+Apply Gate
+
+</button>
+
+<div class="result">
+
+<h2>Result</h2>
+
+<p id="output">
+
+Choose a gate.
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function applyGate(){
+
+let gate=document.getElementById("gate").value;
+
+let text="";
+
+if(gate=="Hadamard"){
+
+text="New State: (|0⟩ + |1⟩)/√2<br><br>Explanation: The Hadamard gate creates a superposition.";
+
+}
+
+else if(gate=="Pauli-X"){
+
+text="New State: |1⟩<br><br>Explanation: The X gate flips the qubit.";
+
+}
+
+else{
+
+text="New State: |0⟩ (Phase Changed)<br><br>Explanation: The Z gate changes the phase of the qubit.";
+
+}
+
+document.getElementById("output").innerHTML=text;
+
+}
+
+</script>
+
+</body>
+
+</html>

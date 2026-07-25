@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Quantum Circuit Builder</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='css/style.css') }}">
+
+<style>
+
+.container{
+width:80%;
+margin:auto;
+margin-top:40px;
+}
+
+select{
+padding:10px;
+font-size:18px;
+margin-top:20px;
+}
+
+.result{
+margin-top:30px;
+background:#10263d;
+padding:20px;
+border-radius:10px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Quantum Circuit Builder</h1>
+
+<p>Select a Quantum Gate</p>
+
+<select id="gate">
+
+<option>Hadamard (H)</option>
+
+<option>Pauli-X</option>
+
+<option>Pauli-Z</option>
+
+</select>
+
+<br><br>
+
+<button onclick="runCircuit()">
+
+Run Circuit
+
+</button>
+
+<div class="result">
+
+<h2>Explanation</h2>
+
+<p id="output">
+
+Choose a gate and click Run Circuit.
+
+</p>
+
+</div>
+
+</div>
+
+<script>
+
+function runCircuit(){
+
+let gate=document.getElementById("gate").value;
+
+let text="";
+
+if(gate=="Hadamard (H)"){
+
+text="The Hadamard gate creates Superposition.";
+
+}
+
+else if(gate=="Pauli-X"){
+
+text="The X gate flips |0⟩ to |1⟩.";
+
+}
+
+else{
+
+text="The Z gate changes the phase of the qubit.";
+
+}
+
+document.getElementById("output").innerHTML=text;
+
+}
+
+</script>
+
+</body>
+
+</html>
